@@ -1,0 +1,21 @@
+# Funcionalidades Suso Motel
+
+- Furnis:
+	- Nombre
+	- Descripción
+	- Precio
+	- Rango mínimo de compra: todos, club 4ª planta, club esei, VIP, Mods, Admins
+	- Imagen??
+	- Clase: página
+- Clases de Furnis: son las diferentes clasificaciones de furnis en la tienda.
+	- Sillas, mesas, sofás, estatuas, baños, baños 4ª planta, sillas club esei...
+- Usuarios:
+	- Nombre de usuario
+	- Email
+	- Contraseña
+	- Créditos (dinero)
+	- Badges (No-SQL)
+	- Inventario (No-SQL)
+	- Lista de amigos (No-SQL)
+- Chats con amigos
+- Salas
