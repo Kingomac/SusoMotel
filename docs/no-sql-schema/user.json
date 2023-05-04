@@ -1,0 +1,8 @@
+{
+	"_id": "random string",
+	"credits": "number",
+	"inventory": {
+		"type": "{ furni_id: number, amount: number } []",
+	},
+	"badges": "badge_id []"
+}

@@ -7,6 +7,7 @@
 	- Rango mínimo de compra: todos, club 4ª planta, club esei, VIP, Mods, Admins
 	- Imagen??
 	- Clase: página
+	- Interacciones posibles: pasar por encima, sentarse encima, tumbarse encima.
 - Clases de Furnis: son las diferentes clasificaciones de furnis en la tienda.
 	- Sillas, mesas, sofás, estatuas, baños, baños 4ª planta, sillas club esei...
 - Usuarios:
