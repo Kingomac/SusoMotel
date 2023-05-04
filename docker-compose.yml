@@ -1,0 +1,44 @@
+version: '3.9'
+networks:
+  suso-net:
+    name: 'suso-net'
+secrets:
+  mariadb_password_root:
+    file: secrets/mariadb_password_root.txt
+  mariadb_password:
+    file: secrets/mariadb_password.txt
+  mongodb_password_root:
+    file: secrets/mongodb_password_root.txt
+
+services:
+  suso-mariadb:
+    networks:
+      - suso-net
+    image: mariadb
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD_FILE: /run/secrets/mariadb_password_root
+      MARIADB_DATABASE: susomotel
+      MARIADB_USER: suso
+      MARIADB_PASSWORD_FILE: /run/secrets/mariadb_password
+    secrets:
+      - mariadb_password_root
+      - mariadb_password
+  suso-mongodb:
+    image: mongo
+    restart: always
+    networks:
+      - suso-net
+    secrets:
+      - mongodb_password_root
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: suso
+      MONGO_INITDB_ROOT_PASSWORD_FILE: /run/secrets/mongodb_password_root
+  suso-server:
+    image: mcr.microsoft.com/dotnet/runtime:7.0
+    networks:
+      - suso-net
+    volumes:
+      - ./server:/app:rw
+    
+
