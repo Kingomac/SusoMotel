@@ -1,10 +1,10 @@
 
 namespace SusoAPI;
 
-public record User(string Id, long Money)
+public record User(uint Id, uint Money)
 {
-    public string Id { get; init; }
+    public uint Id { get; init; } = Id;
 
-    public long Money { get; set; }
+    public uint Money { get; set; } = Money;
 
 }
